@@ -1,8 +1,7 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="./src/images/logo.png" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  기술 이력서
+  🔵 resume.chayeoi.site
 </h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fbb891d2-eb08-44c9-869a-5cf9ab97ea38/deploy-status)](https://app.netlify.com/sites/chayeoi-resume/deploys)
+
+개발자 김찬연 기술 이력서
