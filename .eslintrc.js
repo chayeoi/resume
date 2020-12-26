@@ -19,6 +19,7 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'react',
+    'react-hooks',
     'simple-import-sort',
   ],
   rules: {
@@ -28,6 +29,8 @@ module.exports = {
     'node/no-path-concat': 'off',
     'no-use-before-define': 'off',
     'react/prop-types': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'simple-import-sort/imports': ['error', {
       groups: [
         ['^react', '^@?\\w'],
