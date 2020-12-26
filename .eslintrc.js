@@ -25,6 +25,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
     'comma-dangle': ['error', 'always-multiline'],
+    indent: ['error', 2],
     'multiline-ternary': 'off',
     'node/no-path-concat': 'off',
     'no-use-before-define': 'off',
