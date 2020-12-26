@@ -3,8 +3,6 @@ import { Container } from '@theme-ui/components'
 
 import Header from '../Header'
 
-import '@fontsource/noto-sans-kr'
-
 type Props = {
   children: React.ReactNode
 }
