@@ -74,7 +74,7 @@ const theme = {
         px: 3,
         py: 2,
         color: 'text',
-        bg: 'transparent',
+        bg: 'rgba(189, 189, 189, 0.08)',
         fontSize: 1,
         fontWeight: 500,
         textTransform: 'uppercase',
