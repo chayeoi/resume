@@ -1,6 +1,6 @@
 const theme = {
   useColorSchemeMediaQuery: true,
-  breakpoints: ['48em', '60em', '80em'],
+  breakpoints: ['720px', '960px', '1280px'],
   // Scales
   colors: {
     text: '#37352f',
@@ -31,7 +31,7 @@ const theme = {
     body: 1.5,
     heading: 1.125,
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, 16, 24, 32, 64, 128, 256, 512],
   letterSpacings: {
     tighter: '-0.05em',
     tight: '-0.025em',
@@ -39,6 +39,11 @@ const theme = {
     wide: '0.025em',
     wider: '0.05em',
     widest: '0.1em',
+  },
+  sizes: {
+    container: '1280px',
+    viewportWidth: '100vw',
+    viewportHeight: '100vh',
   },
   borderWidths: {
     0: '0',
@@ -59,6 +64,12 @@ const theme = {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
+    },
+    h1: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: [5, 6, 6],
     },
   },
   // Variants

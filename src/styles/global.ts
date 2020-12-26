@@ -11,6 +11,10 @@ const global = css`
     margin: 0;
     padding: 0;
   }
+
+  i {
+    font-style: normal;
+  }
 `
 
 export default global
