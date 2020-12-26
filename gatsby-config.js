@@ -25,7 +25,7 @@ module.exports = {
           name: '비바리퍼블리카',
           position: '프론트엔드 개발자',
           period: '(Since Dec 2020)',
-          description: '인터넷 전문은행 <strong>토스뱅크에서 카드 서비스 개발을 담당</strong>하고 있습니다.',
+          description: '인터넷 전문은행을 준비 중인 <strong>토스뱅크에서 카드 서비스 개발을 담당</strong>하고 있습니다.',
         },
         {
           name: '클래스팅',
