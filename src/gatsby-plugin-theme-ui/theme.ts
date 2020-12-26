@@ -21,7 +21,7 @@ const theme = {
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 40, 48, 64, 96],
+  fontSizes: [12, 14, 16, 20, 24, 30, 32, 40, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -29,7 +29,7 @@ const theme = {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.25,
   },
   space: [0, 4, 8, 16, 24, 32, 64, 128, 256, 512],
   letterSpacings: {
@@ -42,6 +42,7 @@ const theme = {
   },
   sizes: {
     container: '1280px',
+    full: '100%',
     viewportWidth: '100vw',
     viewportHeight: '100vh',
   },
@@ -66,10 +67,21 @@ const theme = {
       fontWeight: 'heading',
     },
     h1: {
+      marginBottom: [5, 4],
       fontFamily: 'heading',
-      lineHeight: 'heading',
+      fontSize: [6, 7, 7],
       fontWeight: 'heading',
-      fontSize: [5, 6, 6],
+      lineHeight: 'heading',
+    },
+    h2: {
+      marginBottom: 4,
+      fontFamily: 'heading',
+      fontSize: [4, 5, 5],
+      fontWeight: 600,
+      lineHeight: 'heading',
+    },
+    p: {
+      my: 2,
     },
   },
   // Variants

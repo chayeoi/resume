@@ -1,9 +1,10 @@
-import { Layout, SEO } from '../components'
+import { About, Layout, SEO } from '../components'
 
 function Home() {
   return (
     <Layout>
       <SEO title="Home" />
+      <About />
     </Layout>
   )
 }

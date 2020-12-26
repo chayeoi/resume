@@ -11,12 +11,7 @@ function Layout({ children }: Props) {
   return (
     <Container>
       <Header />
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, chayeoi
-        </footer>
-      </div>
+      <main sx={{ px: 3 }}>{children}</main>
     </Container>
   )
 }
