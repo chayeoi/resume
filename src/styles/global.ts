@@ -15,6 +15,10 @@ const global = css`
   i {
     font-style: normal;
   }
+
+  main {
+    display: block;
+  }
 `
 
 export default global
