@@ -5,7 +5,7 @@ import { About, Activities, Educations, Experiences, Layout, Projects, SEO, Skil
 function Home() {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="김찬연 기술 이력서" />
       <About />
       <Divider />
       <Experiences />
