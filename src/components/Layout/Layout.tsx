@@ -11,7 +11,7 @@ function Layout({ children }: Props) {
   return (
     <Container>
       <Header />
-      <main sx={{ px: 3 }}>{children}</main>
+      <main sx={{ px: [3, 4] }}>{children}</main>
     </Container>
   )
 }

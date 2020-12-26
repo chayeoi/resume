@@ -21,7 +21,8 @@ function Header(props: Props) {
   return (
     <header {...props}>
       <Flex
-        p={3}
+        px={[3, 4]}
+        py={3}
         sx={{
           width: '100vw',
           position: 'relative',
@@ -30,7 +31,7 @@ function Header(props: Props) {
       >
         <Navbar sx={{ marginLeft: 'auto' }} />
       </Flex>
-      <Box p={3}>
+      <Box px={[3, 4]} py={3}>
         <i
           sx={{
             display: 'block',
