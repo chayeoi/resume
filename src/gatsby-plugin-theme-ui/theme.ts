@@ -91,7 +91,6 @@ const theme = {
   links: {
     anchor: {
       textDecoration: 'underline',
-      transition: 'color 0.3s',
       '&:focus, &:hover': {
         color: 'secondary',
       },
