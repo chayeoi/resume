@@ -76,7 +76,7 @@ function SEO({
         // },
         {
           property: 'og:title',
-          content: title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title,
+          content: title,
         },
         {
           property: 'og:description',
