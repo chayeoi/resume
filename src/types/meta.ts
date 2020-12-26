@@ -17,3 +17,8 @@ export type Project = {
   value: string
   description: string
 }
+
+export type Skill = {
+  name: string
+  items: string[]
+}
