@@ -41,7 +41,14 @@ function About() {
     <Flex as="section" sx={{ flexDirection: ['column', 'column', 'row'], alignItems: ['center', 'center', 'flex-start'] }}>
       <Box sx={{ pr: [0, 0, 4] }}>
         <Heading as="h2" variant="h2" sx={{ mb: 4, color: 'text' }}>{data.site.siteMetadata.about.title}</Heading>
-        {paragraphs.map((paragraph, index) => <Text key={index} as="p" variant="p" dangerouslySetInnerHTML={{ __html: paragraph }} />)}
+        {paragraphs.map((paragraph, index) => (
+          <Text
+            key={index}
+            as="p"
+            variant="p"
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+            sx={{ '& a': { textDecoration: 'underline' } }}
+          />))}
         <ul sx={{ my: 3 }}>
           {contacts.map(contact => (
             <Flex key={contact.name} as="li" sx={{ my: 2 }}>
