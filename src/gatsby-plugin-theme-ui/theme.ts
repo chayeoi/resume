@@ -134,6 +134,7 @@ const theme = {
   // Styles
   styles: {
     root: {
+      pb: 7,
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',

@@ -1,5 +1,6 @@
 export { default as About } from './About'
 export { default as Activities } from './Activities'
+export { default as Educations } from './Educations'
 export { default as Experiences } from './Experiences'
 export { default as Header } from './Header'
 export { default as Layout } from './Layout'

@@ -29,3 +29,9 @@ export type Activity = {
   period: string
   description: string
 }
+
+export type Education = {
+  name: string
+  period: string
+  description: string
+}
