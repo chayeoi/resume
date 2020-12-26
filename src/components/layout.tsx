@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import Header from './header'
 
-import './layout.css'
+import '@fontsource/noto-sans-kr'
 
 type Props = {
   children: React.ReactNode
@@ -22,7 +22,7 @@ const Layout = ({ children }: Props) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
+      <Header title={data.site.siteMetadata?.title} />
       <div
         style={{
           margin: '0 auto',

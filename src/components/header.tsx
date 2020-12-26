@@ -1,15 +1,11 @@
-import React from 'react'
 import { Link } from 'gatsby'
 
 type Props = {
-  siteTitle?: string
+  title?: string
 }
 
-const Header = ({ siteTitle = '' }: Props) => (
-  <header
-    style={{
-    }}
-  >
+const Header = ({ title = '' }: Props) => (
+  <header>
     <div
       style={{
         margin: '0 auto',
@@ -20,12 +16,8 @@ const Header = ({ siteTitle = '' }: Props) => (
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
-          {siteTitle}
+          {title}
         </Link>
       </h1>
     </div>
