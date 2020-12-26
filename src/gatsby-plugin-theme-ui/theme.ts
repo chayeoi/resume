@@ -60,30 +60,6 @@ const theme = {
     lg: '0.5rem',
     full: '9999px',
   },
-  text: {
-    heading: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
-    },
-    h1: {
-      marginBottom: [5, 4],
-      fontFamily: 'heading',
-      fontSize: [6, 7, 7],
-      fontWeight: 'heading',
-      lineHeight: 'heading',
-    },
-    h2: {
-      marginBottom: 4,
-      fontFamily: 'heading',
-      fontSize: [4, 5, 5],
-      fontWeight: 600,
-      lineHeight: 'heading',
-    },
-    p: {
-      my: 2,
-    },
-  },
   // Variants
   buttons: {
     primary: {
@@ -108,6 +84,39 @@ const theme = {
           bg: 'muted',
         },
       },
+    },
+  },
+  links: {
+    anchor: {
+      textDecoration: 'underline',
+      transition: 'color 0.3s',
+      '&:focus, &:hover': {
+        color: 'secondary',
+      },
+    },
+  },
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+    },
+    h1: {
+      marginBottom: [5, 4],
+      fontFamily: 'heading',
+      fontSize: [6, 7, 7],
+      fontWeight: 'heading',
+      lineHeight: 'heading',
+    },
+    h2: {
+      marginBottom: 4,
+      fontFamily: 'heading',
+      fontSize: [4, 5, 5],
+      fontWeight: 600,
+      lineHeight: 'heading',
+    },
+    p: {
+      my: 2,
     },
   },
   // Styles

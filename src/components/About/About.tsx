@@ -1,7 +1,10 @@
 import { useMemo } from 'react'
-import { Box, Flex, Heading, Text } from '@theme-ui/components'
+import { Box, Flex, Heading, Link, Text } from '@theme-ui/components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
+
+import { Contact } from '../../types'
+import { isEmail } from '../../utils'
 
 function About() {
   const data = useStaticQuery(graphql`
@@ -12,6 +15,11 @@ function About() {
           about {
             title
             content
+            contacts {
+              name
+              emoji
+              href
+            }
           }
         }
       }
@@ -30,12 +38,23 @@ function About() {
     .filter((value: string) => value),
   [data.site.siteMetadata.about])
 
+  const contacts: Contact[] = useMemo(() => data.site.siteMetadata.about.contacts, [data.site.siteMetadata.about.contacts])
+
   return (
     <Flex as="section" sx={{ flexDirection: ['column', 'column', 'row'], alignItems: ['center', 'center', 'flex-start'] }}>
       <Box sx={{ pr: [0, 0, 3] }}>
         <Heading as="h2" variant="h2">{data.site.siteMetadata.about.title}</Heading>
-        {paragraphs.map((paragraph, index) => (
-          <Text key={index} as="p" variant="p" dangerouslySetInnerHTML={{ __html: paragraph }} />))}
+        {paragraphs.map((paragraph, index) => <Text key={index} as="p" variant="p" dangerouslySetInnerHTML={{ __html: paragraph }} />)}
+        <ul sx={{ my: 3 }}>
+          {contacts.map(contact => (
+            <Flex key={contact.name} as="li" sx={{ my: 2 }}>
+              <i sx={{ mr: 1 }}>{contact.emoji}</i>
+              <strong>
+                <Link variant="anchor" href={contact.href}>{isEmail(contact.href) ? contact.href : contact.name}</Link>
+              </strong>
+            </Flex>
+          ))}
+        </ul>
       </Box>
       <div
         sx={{
