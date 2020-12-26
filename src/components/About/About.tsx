@@ -58,7 +58,7 @@ function About() {
           order: [-1, -1, 0],
           overflow: 'hidden',
           width: 'full',
-          maxWidth: '380px',
+          maxWidth: ['720px', '720px', '380px'],
           marginBottom: [5, 5, 0],
           borderRadius: 'full',
         }}
