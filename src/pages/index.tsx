@@ -1,3 +1,5 @@
+import { Divider } from '@theme-ui/components'
+
 import { About, Layout, SEO } from '../components'
 
 function Home() {
@@ -5,6 +7,7 @@ function Home() {
     <Layout>
       <SEO title="Home" />
       <About />
+      <Divider />
     </Layout>
   )
 }

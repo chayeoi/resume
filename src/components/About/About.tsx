@@ -25,7 +25,7 @@ function About() {
       }
       file(relativePath: { eq: "profile.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 420) {
+          fluid(maxWidth: 380) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -42,7 +42,7 @@ function About() {
 
   return (
     <Flex as="section" sx={{ flexDirection: ['column', 'column', 'row'], alignItems: ['center', 'center', 'flex-start'] }}>
-      <Box sx={{ pr: [0, 0, 3] }}>
+      <Box sx={{ pr: [0, 0, 4] }}>
         <Heading as="h2" variant="h2">{data.site.siteMetadata.about.title}</Heading>
         {paragraphs.map((paragraph, index) => <Text key={index} as="p" variant="p" dangerouslySetInnerHTML={{ __html: paragraph }} />)}
         <ul sx={{ my: 3 }}>
@@ -61,7 +61,7 @@ function About() {
           order: [-1, -1, 0],
           overflow: 'hidden',
           width: 'full',
-          maxWidth: '420px',
+          maxWidth: '380px',
           marginBottom: [5, 5, 0],
           borderRadius: 'full',
         }}

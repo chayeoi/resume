@@ -9,10 +9,12 @@ const theme = {
     secondary: '#0b6e99',
     muted: 'rgba(68, 138, 255, 0.08)',
     gray: '#9b9a97',
+    hr: 'rgba(55, 53, 47, 0.09)',
     modes: {
       dark: {
         text: '#f5f6f7',
         background: '#060606',
+        hr: 'rgba(255, 255, 255, 0.09)',
       },
     },
   },
@@ -126,6 +128,9 @@ const theme = {
       lineHeight: 'body',
       fontWeight: 'body',
       transition: 'color 0.3s, background-color 0.3s',
+    },
+    hr: {
+      color: 'hr',
     },
   },
 }
