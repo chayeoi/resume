@@ -39,6 +39,51 @@ module.exports = {
         },
       ],
     },
+    projects: {
+      title: '프로젝트',
+      content: [
+        {
+          name: '클래스팅 스쿨',
+          period: '(Apr 2018 - Jul 2020)',
+          value: 'classting-school',
+          description: `
+            클릭 몇 번으로 회신용 가정통신문을 제작, 배포하고 통계 자료를 자동 취합하는 등 <strong>선생님들의 업무 생산성 향상을 위한 학교 종합 관리 서비스</strong>입니다.
+            제품의 초기 프로토타입을 백엔드 없이 React와 Firebase를 사용하여 구축하였고, 이후에 서비스가 점차 고도화됨에 따라 <strong>프론트엔드 전 영역을 맡아서 개발</strong>했습니다.
+            제품의 초기 버전은 React와 JavaScript, Redux, Redux Saga, Styled Components, Firebase 등을 사용해 개발했으며, Jest와 Enzyme, Storybook을 사용하여 테스트를 관리했습니다. 이후에 기술 스택을 점진적으로 TypeScript, GraphQL 기반의 앱으로 마이그레이션하기 위한 준비 작업을 진행했습니다.
+            학교에서 사용하는 서비스의 특성 상 IE 사용자가 전체의 50%에 달했기 때문에, 미지원 스펙 및 API 호환성, 성능 등과 관련한 다양한 크로스 브라우징 이슈에 대응하며 지속적으로 사용자 경험을 개선하기 위해 노력했습니다.
+          `,
+        },
+        {
+          name: '클래스팅 AI',
+          period: '(May 2020 - Jul 2020)',
+          value: 'classting-ai',
+          description: `
+            학생들에게 인공지능 기반의 개별화된 맞춤 학습을 제공하고 쌓여진 학습 정보를 바탕으로 학습 리포트를 관리 지도할 수 있는 <strong>학습 관리 시스템</strong>입니다.
+            클래스팅 AI에서 <strong>학생들의 일별, 연간 학습 현황 등을 시각화한 그래프로 확인할 수 있는 관리자 페이지 개발과 데일리 퀴즈 리워드 페이지를 웹뷰로 이전하는 작업을 진행</strong>했으며, React, Redux, Redux Saga, Styled Components를 사용해 개발했습니다.
+          `,
+        },
+        {
+          name: '개인 블로그',
+          period: '(Feb 2020)',
+          value: 'personal-blog',
+          description: `
+            오랫동안 사용해왔던 Jekyll 블로그를 <a href="https://blog.chayeoi.site/" target="_blank">Gatsby 블로그</a>로 전환하는 작업을 진행했습니다.
+            <strong>디자인을 포함해 <a href="https://github.com/chayeoi/blog/pull/59" target="_blank">스크롤스파이</a>, <a href="https://github.com/chayeoi/blog/pull/32" target="_blank">다크 모드</a> 등 거의 모든 기능을 라이브러리를 사용하지 않고 직접 구현</strong>했으며, 검색 엔진 최적화를 위해 웹 표준 준수와 웹 접근성에도 많은 신경을 썼습니다.
+            비교적 규모가 작은 프로젝트이긴 해도, 추후에 변경 이력 추적을 원활히 하기 위해 <strong><a href="https://github.com/chayeoi/blog/issues?page=2&q=is%3Aissue+is%3Aclosed" target="_blank">이슈</a>와 <a href="https://github.com/chayeoi/blog/releases" target="_blank">릴리즈 노트</a>, 커밋 히스토리를 체계적으로 관리</strong>하고자 노력했습니다.
+            사용한 주요 기술 스택은 React, Gatsby, TypeScript, Emotion 등이며, 소스 코드는 <a href="https://github.com/chayeoi/blog" target="_blank">GitHub 저장소</a>에 공개되어 있습니다.
+          `,
+        },
+        {
+          name: '기술 문서 번역',
+          period: '(Since Jan 2019)',
+          value: 'translation',
+          description: `
+            <strong>React 공식 문서 한국어 번역 프로젝트인 <a href="https://github.com/reactjs/ko.reactjs.org" target="_blank">reactjs/ko.reactjs.org</a>의 Collaborator로써 참여</strong>하는 등, <a href="https://ko.reactjs.org/" target="_blank">React 공식 문서</a>, <a href="https://ko.javascript.info/" target="_blank">JAVASCRIPT.INFO</a>, <a href="https://developer.mozilla.org/ko/" target="_blank">MDN</a> 등 다양한 오픈소스 기술 문서의 한국어 번역에 지속적으로 참여하고 있습니다.
+            <ul><li><a href="https://ko.reactjs.org/docs/lifting-state-up.html" target="_blank">State 끌어올리기 | ko.reactjs.org</a></li><li><a href="https://ko.reactjs.org/docs/hello-world.html" target="_blank">Hello World | ko.reactjs.org</a></li><li><a href="https://github.com/javascript-tutorial/ko.javascript.info/pull/873" target="_blank">Fetch: 중단 | ko.javascript.info</a></li></ul>
+          `,
+        },
+      ],
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',

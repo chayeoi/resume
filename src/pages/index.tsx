@@ -1,6 +1,6 @@
 import { Divider } from '@theme-ui/components'
 
-import { About, Experiences, Layout, SEO } from '../components'
+import { About, Experiences, Layout, Projects, SEO } from '../components'
 
 function Home() {
   return (
@@ -9,6 +9,8 @@ function Home() {
       <About />
       <Divider />
       <Experiences />
+      <Divider />
+      <Projects />
     </Layout>
   )
 }

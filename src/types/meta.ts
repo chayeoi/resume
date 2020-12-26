@@ -10,3 +10,10 @@ export type Experience = {
   period: string
   description: string
 }
+
+export type Project = {
+  name: string
+  period: string
+  value: string
+  description: string
+}
