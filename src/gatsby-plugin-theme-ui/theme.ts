@@ -104,16 +104,26 @@ const theme = {
       fontWeight: 'heading',
     },
     h1: {
-      marginBottom: [5, 4],
+      mb: [5, 4],
       fontFamily: 'heading',
       fontSize: [6, 7, 7],
       fontWeight: 'heading',
       lineHeight: 'heading',
     },
     h2: {
-      marginBottom: 4,
       fontFamily: 'heading',
       fontSize: [4, 5, 5],
+      fontWeight: 600,
+      lineHeight: 'heading',
+      color: 'secondary',
+      'hr + * &': {
+        mt: 4,
+      },
+    },
+    h3: {
+      mt: 4,
+      fontFamily: 'heading',
+      fontSize: [3, 4, 4],
       fontWeight: 600,
       lineHeight: 'heading',
     },

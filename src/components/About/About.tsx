@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 
 import { Contact } from '../../types'
-import { isEmail } from '../../utils'
+import { isEmail, splitParagraph } from '../../utils'
 
 function About() {
   const data = useStaticQuery(graphql`
@@ -33,17 +33,14 @@ function About() {
     }
   `)
 
-  const paragraphs: string[] = useMemo(() => data.site.siteMetadata.about.content
-    .split(/\n\s+/)
-    .filter((value: string) => value),
-  [data.site.siteMetadata.about])
+  const paragraphs: string[] = useMemo(() => splitParagraph(data.site.siteMetadata.about.content), [data.site.siteMetadata.about])
 
   const contacts: Contact[] = useMemo(() => data.site.siteMetadata.about.contacts, [data.site.siteMetadata.about.contacts])
 
   return (
     <Flex as="section" sx={{ flexDirection: ['column', 'column', 'row'], alignItems: ['center', 'center', 'flex-start'] }}>
       <Box sx={{ pr: [0, 0, 4] }}>
-        <Heading as="h2" variant="h2">{data.site.siteMetadata.about.title}</Heading>
+        <Heading as="h2" variant="h2" sx={{ mb: 4, color: 'text' }}>{data.site.siteMetadata.about.title}</Heading>
         {paragraphs.map((paragraph, index) => <Text key={index} as="p" variant="p" dangerouslySetInnerHTML={{ __html: paragraph }} />)}
         <ul sx={{ my: 3 }}>
           {contacts.map(contact => (

@@ -18,6 +18,27 @@ module.exports = {
         { name: 'Notion', emoji: '👨🏻‍💻', href: 'https://www.notion.so/chayeoi/Personal-Workspace-ec488ad57426478d9f0766fa91a048e9' },
       ],
     },
+    experiences: {
+      title: '경험',
+      content: [
+        {
+          name: '비바리퍼블리카',
+          position: '프론트엔드 개발자',
+          period: '(Since Dec 2020)',
+          description: '인터넷 전문은행 <strong>토스뱅크에서 카드 서비스 개발을 담당</strong>하고 있습니다.',
+        },
+        {
+          name: '클래스팅',
+          position: '프론트엔드 개발자',
+          period: '(Apr 2018 - Jul 2020)',
+          description: `
+            초중고 학교교육 플랫폼 <strong>클래스팅</strong>에서 <strong>선생님들의 업무를 돕기 위한 학교 관련 서비스를 개발</strong>했습니다.
+            학교 선생님으로 일하고 있는 대학 동기 및 선후배들이 주변에 많았던 만큼, 교육 현장에 있는 선생님들의 생각을 직접 듣고 반영하면서 좋은 제품을 만들고자 노력했습니다.
+            스크럼 방법론에 따라 2주 단위 스프린트로 제품을 개발하며 애자일 개발 프로세스를 경험했고, 사내 프론트엔드 그룹의 테크톡 및 세미나, 인상 깊었던 코드 리뷰 공유 등 건강한 개발 문화 정착을 위해 다양한 시도를 했습니다.
+          `,
+        },
+      ],
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',

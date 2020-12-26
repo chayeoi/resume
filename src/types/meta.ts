@@ -3,3 +3,10 @@ export type Contact = {
   emoji: string
   href: string
 }
+
+export type Experience = {
+  name: string
+  position: string
+  period: string
+  description: string
+}
