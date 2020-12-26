@@ -120,6 +120,30 @@ module.exports = {
         },
       ],
     },
+    activities: {
+      title: '활동',
+      content: [
+        {
+          name: '스파르타 코딩클럽',
+          role: '프로그래밍 튜터',
+          period: '(Since Jul 2020)',
+          description: `
+            비전공자 직장인들을 대상으로 한 웹 프로그래밍 교육을 진행하고 있습니다.
+            HTML, CSS, JavaScript와 Python 기반의 Flask 프레임워크 기본기를 학습하고 수강생들이 자신의 서비스를 직접 만들어보는 교육 과정이었고, 짧은 기간동안 코딩을 처음 접하는 분들에게 많은 내용을 압축해서 전달해야 했기 때문에 추상적인 개념을 이해하기 쉽게 설명할 방법을 지속적으로 고민했습니다.
+          `,
+        },
+        {
+          name: '매쉬업',
+          role: 'IT 연합동아리',
+          period: '(Mar 2018 - Dec 2019)',
+          description: `
+            IT 연합 동아리 MASH-UP에서 활동하며 여러 차례의 세미나와 테크톡 및 코드랩을 진행했습니다.
+            또한 "웹 표준과 접근성을 고려한 웹 사이트 만들기", "웹 포트폴리오 만들기" 등 여럿 스터디의 리딩을 맡았습니다.
+            <ul><li><a href="https://www.dropbox.com/s/b3jaigyrkm2m76p/scrum-guide.pdf?raw=1" target="_blank">스크럼 실전 가이드</a></li><li><a href="https://www.dropbox.com/s/i5h8z6g3uavdivd/thinking-in-hooks.pdf?raw=1" target="_blank">"클래스 컴포넌트"에서 "함수 컴포넌트 with Hooks"으로 생각 전환하기</a></li><li><a href="https://github.com/chayeoi/toys/tree/main/rgb-challenge" target="_blank">코드랩: RGB Challenge</a></li></ul>
+          `,
+        },
+      ],
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',

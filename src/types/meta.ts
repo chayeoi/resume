@@ -22,3 +22,10 @@ export type Skill = {
   name: string
   items: string[]
 }
+
+export type Activity = {
+  name: string
+  role: string
+  period: string
+  description: string
+}
