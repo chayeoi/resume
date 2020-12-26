@@ -1,11 +1,12 @@
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { Layout, SEO } from '../components'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>김찬연 기술 이력서</h1>
-  </Layout>
-)
+function Home() {
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <h1>김찬연 기술 이력서</h1>
+    </Layout>
+  )
+}
 
-export default IndexPage
+export default Home

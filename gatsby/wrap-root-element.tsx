@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Wrapper from '../src/components/wrapper'
+import { Wrapper } from '../src/components'
 
 function wrapRootElement({ element }: { element: React.ReactNode }) {
   return (

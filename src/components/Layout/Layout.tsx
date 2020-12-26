@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
-import Header from './header'
+import Header from '../Header'
 
 import '@fontsource/noto-sans-kr'
 
@@ -9,7 +9,7 @@ type Props = {
   children: React.ReactNode
 }
 
-const Layout = ({ children }: Props) => {
+function Layout({ children }: Props) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
