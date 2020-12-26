@@ -11,14 +11,18 @@ function ThemeSwitch() {
   }
 
   return (
-    <Button
-      type="button"
-      variant="primary.weak"
-      onClick={handleClick}
-      sx={{ textTransform: 'uppercase' }}
-    >
-      {colorMode === ColorMode.LIGHT ? ColorMode.LIGHT : ColorMode.DARK}
-    </Button>
+    colorMode === ColorMode.DEFAULT
+      ? null
+      : (
+        <Button
+          type="button"
+          variant="primary.weak"
+          onClick={handleClick}
+          sx={{ textTransform: 'uppercase' }}
+        >
+          {colorMode === ColorMode.LIGHT ? ColorMode.LIGHT : ColorMode.DARK}
+        </Button>
+      )
   )
 }
 
