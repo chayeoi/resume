@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 
 import Header from '../Header'
 
@@ -10,19 +9,9 @@ type Props = {
 }
 
 function Layout({ children }: Props) {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header title={data.site.siteMetadata?.title} />
+      <Header />
       <div
         style={{
           margin: '0 auto',

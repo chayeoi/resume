@@ -1,15 +1,19 @@
 const theme = {
   useColorSchemeMediaQuery: true,
   breakpoints: ['48em', '60em', '80em'],
+  // Scales
   colors: {
     text: '#37352f',
-    background: '#fff',
+    background: 'transparent',
     primary: '#2979ff',
     secondary: '#0b6e99',
-    muted: 'rgba(68,138,255,0.08)',
+    muted: 'rgba(68, 138, 255, 0.08)',
     gray: '#9b9a97',
     modes: {
-      dark: {},
+      dark: {
+        text: '#f5f6f7',
+        background: '#060606',
+      },
     },
   },
   fonts: {
@@ -57,11 +61,39 @@ const theme = {
       fontWeight: 'heading',
     },
   },
+  // Variants
+  buttons: {
+    primary: {
+      cursor: 'pointer',
+      weak: {
+        display: 'block',
+        width: '100%',
+        height: '100%',
+        minWidth: '80px',
+        px: 3,
+        py: 2,
+        color: 'text',
+        bg: 'transparent',
+        fontSize: 1,
+        fontWeight: 500,
+        textTransform: 'uppercase',
+        transition: 'color 0.2s, background-color 0.2s',
+        cursor: 'pointer',
+        outline: 'none',
+        '&:active, &:hover, &:focus': {
+          color: 'primary',
+          bg: 'muted',
+        },
+      },
+    },
+  },
+  // Styles
   styles: {
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
+      transition: 'color 0.3s, background-color 0.3s',
     },
   },
 }

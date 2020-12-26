@@ -1,28 +1,12 @@
-import { Link } from 'gatsby'
+import { Flex } from '@theme-ui/components'
 
-type Props = {
-  title?: string
-}
+import Navbar from '../Navbar'
 
-function Header({ title = '' }: Props) {
+function Header() {
   return (
-    <header>
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '1.45rem 1.0875rem',
-        }}
-      >
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-          >
-            {title}
-          </Link>
-        </h1>
-      </div>
-    </header>
+    <Flex p={2} as="header">
+      <Navbar sx={{ marginLeft: 'auto' }} />
+    </Flex>
   )
 }
 
