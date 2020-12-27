@@ -1,3 +1,5 @@
+import { customDivider } from '../constants'
+
 const theme = {
   useColorSchemeMediaQuery: true,
   breakpoints: ['720px', '960px', '1280px'],
@@ -115,8 +117,8 @@ const theme = {
       fontWeight: 600,
       lineHeight: 'heading',
       color: 'secondary',
-      'hr + * &': {
-        mt: 4,
+      [`.${customDivider} + * &`]: {
+        mt: 5,
       },
     },
     h3: {
@@ -140,7 +142,7 @@ const theme = {
       transition: 'color 0.25s, background-color 0.25s',
     },
     hr: {
-      color: 'hr',
+      color: 'inherit',
     },
   },
 }

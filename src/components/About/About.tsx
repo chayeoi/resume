@@ -41,7 +41,7 @@ function About() {
   return (
     <Flex as="section" sx={{ flexDirection: ['column', 'column', 'row'], alignItems: ['center', 'center', 'flex-start'] }}>
       <Box sx={{ pr: [0, 0, 4] }}>
-        <Heading as="h2" variant="h2" sx={{ mb: 4, color: 'text' }} className={showOnScroll}>{data.site.siteMetadata.about.title}</Heading>
+        <Heading as="h2" variant="h2" sx={{ mb: 4, color: 'inherit' }} className={showOnScroll}>{data.site.siteMetadata.about.title}</Heading>
         {paragraphs.map((paragraph, index) => (
           <Text
             key={index}

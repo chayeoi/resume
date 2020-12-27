@@ -1,7 +1,16 @@
 import { useEffect } from 'react'
-import { Divider } from '@theme-ui/components'
 
-import { About, Activities, Educations, Experiences, Layout, Projects, SEO, Skills } from '../components'
+import {
+  About,
+  Activities,
+  Divider,
+  Educations,
+  Experiences,
+  Layout,
+  Projects,
+  SEO,
+  Skills,
+} from '../components'
 import { showOnScroll, visible } from '../constants'
 
 function Home() {
@@ -21,21 +30,23 @@ function Home() {
     targets.forEach((target) => {
       observer.observe(target)
     })
+
+    return observer.disconnect
   }, [])
 
   return (
     <Layout>
       <SEO title="김찬연 기술 이력서" />
       <About />
-      <Divider className={showOnScroll} />
+      <Divider classes={{ hr: showOnScroll }} />
       <Experiences />
-      <Divider className={showOnScroll} />
+      <Divider classes={{ hr: showOnScroll }} />
       <Projects />
-      <Divider className={showOnScroll} />
+      <Divider classes={{ hr: showOnScroll }} />
       <Skills />
-      <Divider className={showOnScroll} />
+      <Divider classes={{ hr: showOnScroll }} />
       <Activities />
-      <Divider className={showOnScroll} />
+      <Divider classes={{ hr: showOnScroll }} />
       <Educations />
     </Layout>
   )
