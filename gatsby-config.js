@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: '김찬연 기술 이력서',
+    title: '기술 이력서',
     description: '안녕하세요, 개발자 김찬연이라고 합니다.',
     author: '김찬연',
     siteUrl: 'https://resume.chayeoi.site',
