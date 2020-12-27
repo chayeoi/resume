@@ -78,7 +78,7 @@ const theme = {
         fontSize: 1,
         fontWeight: 500,
         textTransform: 'uppercase',
-        transition: 'color 0.2s, background-color 0.2s',
+        transition: 'color 0.25s, background-color 0.25s',
         cursor: 'pointer',
         outline: 'none',
         '&:active, &:hover, &:focus': {
@@ -137,7 +137,7 @@ const theme = {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
-      transition: 'color 0.3s, background-color 0.3s',
+      transition: 'color 0.25s, background-color 0.25s',
     },
     hr: {
       color: 'hr',
