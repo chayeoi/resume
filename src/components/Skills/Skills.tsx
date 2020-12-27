@@ -35,14 +35,13 @@ function Skills() {
             key={skill.name}
             as="li"
             mb={[3, 0]}
-            className={showOnScroll}
           >
-            <Heading as="h3" variant="h3">
+            <Heading as="h3" variant="h3" className={showOnScroll}>
               {skill.name}
             </Heading>
             <ul sx={{ pl: 4, listStyle: 'disc' }}>
               {skill.items.map((item, index) => (
-                <Box key={index} as="li" my={2}>
+                <Box key={index} as="li" my={2} className={showOnScroll}>
                   <Text as="p" dangerouslySetInnerHTML={{ __html: item }} />
                 </Box>
               ))}

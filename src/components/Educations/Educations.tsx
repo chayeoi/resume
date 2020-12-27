@@ -41,16 +41,16 @@ function Educations() {
             className={showOnScroll}
           >
             <Box mb={[2, 0]} pr={[0, 0, 3]} sx={{ flexBasis: '25%' }}>
-              <Heading as="h3" variant="h3">
+              <Heading as="h3" variant="h3" className={showOnScroll}>
                 {education.name}
               </Heading>
-              <div sx={{ my: 2, color: 'gray', fontStyle: 'italic' }}>
+              <div sx={{ my: 2, color: 'gray', fontStyle: 'italic' }} className={showOnScroll}>
                 <Text as="em">{education.period}</Text>
               </div>
             </Box>
             <Box pl={[0, 0, 3]} sx={{ flexBasis: '75%' }}>
               {splitParagraph(education.description).map((paragraph, index) => (
-                <Text key={index} as="p" variant="p" dangerouslySetInnerHTML={{ __html: paragraph }} />
+                <Text key={index} as="p" variant="p" dangerouslySetInnerHTML={{ __html: paragraph }} className={showOnScroll} />
               ))}
             </Box>
           </Flex>

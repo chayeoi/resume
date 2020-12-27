@@ -51,9 +51,9 @@ function About() {
             sx={{ '& a': { textDecoration: 'underline' } }}
             className={showOnScroll}
           />))}
-        <ul sx={{ my: 3 }} className={showOnScroll}>
+        <ul sx={{ my: 3 }}>
           {contacts.map(contact => (
-            <Flex key={contact.name} as="li" sx={{ my: 2 }}>
+            <Flex key={contact.name} as="li" sx={{ my: 2 }} className={showOnScroll}>
               <i sx={{ mr: 1 }}>{contact.emoji}</i>
               <strong>
                 <Link variant="anchor" href={contact.href}>{isEmail(contact.href) ? contact.href : contact.name}</Link>

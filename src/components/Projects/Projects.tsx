@@ -75,13 +75,12 @@ function Projects() {
             as="li"
             mb={[3, 3, 0]}
             sx={{ flexDirection: ['column', 'column', 'row'] }}
-            className={showOnScroll}
           >
             <Box mb={[3, 3, 0]} pr={[0, 0, 3]} sx={{ flexBasis: '45%' }}>
-              <Heading as="h3" variant="h3">
+              <Heading as="h3" variant="h3" className={showOnScroll}>
                 {project.name}
               </Heading>
-              <div sx={{ my: 2, color: 'gray', fontStyle: 'italic' }}>
+              <div sx={{ my: 2, color: 'gray', fontStyle: 'italic' }} className={showOnScroll}>
                 <Text as="em">{project.period}</Text>
               </div>
               <Box>
@@ -96,12 +95,13 @@ function Projects() {
                       '& li': { my: 2 },
                       '& a': { textDecoration: 'underline' },
                     }}
+                    className={showOnScroll}
                   />
                 ))}
               </Box>
             </Box>
             <Box pl={[0, 0, 3]} my={[0, 0, 4]} sx={{ flexBasis: '55%' }}>
-              <Image fluid={childImageSharps[project.value].fluid} alt={project.name} />
+              <Image fluid={childImageSharps[project.value].fluid} alt={project.name} className={showOnScroll} />
             </Box>
           </Flex>
         ))}

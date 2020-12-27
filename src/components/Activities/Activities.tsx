@@ -39,13 +39,12 @@ function Activities() {
             as="li"
             mb={[3, 0]}
             sx={{ flexDirection: ['column', 'column', 'row'] }}
-            className={showOnScroll}
           >
             <Box mb={[2, 0]} pr={[0, 0, 3]} sx={{ flexBasis: '25%' }}>
-              <Heading as="h3" variant="h3">
+              <Heading as="h3" variant="h3" className={showOnScroll}>
                 {activitie.name}
               </Heading>
-              <div sx={{ my: 2, color: 'gray', fontStyle: 'italic' }}>
+              <div sx={{ my: 2, color: 'gray', fontStyle: 'italic' }} className={showOnScroll}>
                 <Text as="em" sx={{ fontWeight: 'bold' }}>{activitie.role}</Text>
                 <span>⏤</span>
                 <Text as="em">{activitie.period}</Text>
@@ -63,6 +62,7 @@ function Activities() {
                     '& li': { my: 2 },
                     '& a': { textDecoration: 'underline' },
                   }}
+                  className={showOnScroll}
                 />
               ))}
             </Box>
