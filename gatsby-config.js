@@ -27,12 +27,14 @@ module.exports = {
           name: '비바리퍼블리카',
           position: '프론트엔드 개발자',
           period: '(Since Dec 2020)',
+          value: 'toss',
           description: '인터넷 전문은행을 준비 중인 <strong>토스뱅크에서 카드 서비스 개발을 담당</strong>하고 있습니다.',
         },
         {
           name: '클래스팅',
           position: '프론트엔드 개발자',
           period: '(Apr 2018 - Jul 2020)',
+          value: 'classting',
           description: `
             초중고 학교교육 플랫폼 <strong>클래스팅</strong>에서 <strong>선생님들의 업무를 돕기 위한 학교 관련 서비스를 개발</strong>했습니다.
             학교 선생님으로 일하고 있는 대학 동기 및 선후배들이 주변에 많았던 만큼, 교육 현장에 있는 선생님들의 생각을 직접 듣고 반영하면서 좋은 제품을 만들고자 노력했습니다.

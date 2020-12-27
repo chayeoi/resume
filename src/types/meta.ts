@@ -8,6 +8,7 @@ export type Experience = {
   name: string
   position: string
   period: string
+  value: string
   description: string
 }
 
