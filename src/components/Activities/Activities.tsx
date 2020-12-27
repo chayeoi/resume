@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { Box, Flex, Heading, Text } from '@theme-ui/components'
 import { graphql, useStaticQuery } from 'gatsby'
 
+import { showOnScroll } from '../../constants'
 import { Activity } from '../../types'
 import { splitParagraph } from '../../utils'
 
@@ -28,12 +29,18 @@ function Activities() {
 
   return (
     <section sx={{ variant: 'styles.section' }}>
-      <Heading as="h2" variant="h2">
+      <Heading as="h2" variant="h2" className={showOnScroll}>
         {data.site.siteMetadata.activities.title}
       </Heading>
       <ul>
         {activities.map(activitie => (
-          <Flex key={activitie.name} as="li" mb={[3, 0]} sx={{ flexDirection: ['column', 'column', 'row'] }}>
+          <Flex
+            key={activitie.name}
+            as="li"
+            mb={[3, 0]}
+            sx={{ flexDirection: ['column', 'column', 'row'] }}
+            className={showOnScroll}
+          >
             <Box mb={[2, 0]} pr={[0, 0, 3]} sx={{ flexBasis: '25%' }}>
               <Heading as="h3" variant="h3">
                 {activitie.name}

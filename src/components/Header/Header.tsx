@@ -1,6 +1,7 @@
 import { Box, Flex, Heading } from '@theme-ui/components'
 import { graphql, useStaticQuery } from 'gatsby'
 
+import { showOnScroll } from '../../constants'
 import Navbar from '../Navbar'
 
 type Props = {
@@ -38,10 +39,11 @@ function Header(props: Props) {
             marginBottom: 2,
             fontSize: [6, 7, 8],
           }}
+          className={showOnScroll}
         >
           👨🏻‍💻
         </i>
-        <Heading as="h1" variant="h1">
+        <Heading as="h1" variant="h1" className={showOnScroll}>
           {data.site.siteMetadata.title}
         </Heading>
       </Box>

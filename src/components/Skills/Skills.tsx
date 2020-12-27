@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { Box, Heading, Text } from '@theme-ui/components'
 import { graphql, useStaticQuery } from 'gatsby'
 
+import { showOnScroll } from '../../constants'
 import { Skill } from '../../types'
 
 function Skills() {
@@ -25,12 +26,17 @@ function Skills() {
 
   return (
     <section sx={{ variant: 'styles.section' }}>
-      <Heading as="h2" variant="h2">
+      <Heading as="h2" variant="h2" className={showOnScroll}>
         {data.site.siteMetadata.skills.title}
       </Heading>
       <ul>
         {skills.map(skill => (
-          <Box key={skill.name} as="li" mb={[3, 0]}>
+          <Box
+            key={skill.name}
+            as="li"
+            mb={[3, 0]}
+            className={showOnScroll}
+          >
             <Heading as="h3" variant="h3">
               {skill.name}
             </Heading>

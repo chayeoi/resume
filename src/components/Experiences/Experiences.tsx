@@ -3,6 +3,7 @@ import { Box, Flex, Heading, Text } from '@theme-ui/components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 
+import { showOnScroll } from '../../constants'
 import { Experience } from '../../types'
 import { splitParagraph } from '../../utils'
 
@@ -65,12 +66,18 @@ function Experiences() {
 
   return (
     <section sx={{ variant: 'styles.section' }}>
-      <Heading as="h2" variant="h2">
+      <Heading as="h2" variant="h2" className={showOnScroll}>
         {data.site.siteMetadata.experiences.title}
       </Heading>
       <ul>
         {experiences.map(experience => (
-          <Flex key={experience.name} as="li" mb={[3, 0]} sx={{ flexDirection: ['column', 'column', 'row'] }}>
+          <Flex
+            key={experience.name}
+            as="li"
+            mb={[3, 0]}
+            sx={{ flexDirection: ['column', 'column', 'row'] }}
+            className={showOnScroll}
+          >
             <Box mb={[2, 0]} pr={[0, 0, 3]} sx={{ flexBasis: '25%' }}>
               <Heading as="h3" variant="h3" sx={{ display: 'flex', alignItems: 'center' }}>
                 <i sx={{ width: '20px', height: '20px', mr: 1, transform: 'translateY(-2px)' }}>
