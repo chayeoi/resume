@@ -60,7 +60,7 @@ function Projects() {
   const childImageSharps: any = useMemo(() => data.allFile.edges.reduce((acc, cur) => ({
     ...acc,
     [cur.node.name]: cur.node.childImageSharp,
-  }), { a: 1 }), [data.allFile.edges])
+  }), {}), [data.allFile.edges])
 
   return (
     <section sx={{ variant: 'styles.section' }}>
