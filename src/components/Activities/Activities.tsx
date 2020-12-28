@@ -54,7 +54,7 @@ function Activities() {
               {splitParagraph(activity.description).map((paragraph, index) => (
                 <Text
                   key={index}
-                  as="p"
+                  as={paragraph.startsWith('<ul>') ? 'div' : 'p'}
                   variant="p"
                   dangerouslySetInnerHTML={{ __html: paragraph }}
                   sx={{

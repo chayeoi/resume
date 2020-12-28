@@ -87,7 +87,7 @@ function Projects() {
                 {splitParagraph(project.description).map((paragraph, index) => (
                   <Text
                     key={index}
-                    as="p"
+                    as={paragraph.startsWith('<ul>') ? 'div' : 'p'}
                     dangerouslySetInnerHTML={{ __html: paragraph }}
                     variant="p"
                     sx={{
