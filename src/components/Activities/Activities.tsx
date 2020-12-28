@@ -33,25 +33,25 @@ function Activities() {
         {data.site.siteMetadata.activities.title}
       </Heading>
       <ul>
-        {activities.map(activitie => (
+        {activities.map(activity => (
           <Flex
-            key={activitie.name}
+            key={activity.name}
             as="li"
             mb={[3, 0]}
             sx={{ flexDirection: ['column', 'column', 'row'] }}
           >
             <Box mb={[2, 0]} pr={[0, 0, 3]} sx={{ flexBasis: '25%' }}>
               <Heading as="h3" variant="h3" className={showOnScroll}>
-                {activitie.name}
+                {activity.name}
               </Heading>
               <div sx={{ my: 2, color: 'gray', fontStyle: 'italic' }} className={showOnScroll}>
-                <Text as="em" sx={{ fontWeight: 'bold' }}>{activitie.role}</Text>
+                <Text as="em" sx={{ fontWeight: 'bold' }}>{activity.role}</Text>
                 <span>⏤</span>
-                <Text as="em">{activitie.period}</Text>
+                <Text as="em">{activity.period}</Text>
               </div>
             </Box>
             <Box pl={[0, 0, 3]} sx={{ flexBasis: '75%' }}>
-              {splitParagraph(activitie.description).map((paragraph, index) => (
+              {splitParagraph(activity.description).map((paragraph, index) => (
                 <Text
                   key={index}
                   as="p"
