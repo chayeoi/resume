@@ -9,9 +9,9 @@ type Props = {
   }
 }
 
-function Divider({ className, classes = {}, ...otherProps }: Props) {
+function Divider({ className = '', classes = {}, ...otherProps }: Props) {
   return (
-    <div className={`${className} ${customDivider}`} sx={{ color: 'hr' }} {...otherProps}>
+    <div className={`${className} ${customDivider}`.trim()} sx={{ color: 'hr' }} {...otherProps}>
       <ThemeUIDivider className={classes.hr} />
     </div>
   )
