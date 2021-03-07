@@ -6,21 +6,7 @@ import { showOnScroll } from '../../constants'
 import { Skill } from '../../types'
 
 function Skills() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          skills {
-            title
-            content {
-              name
-              items
-            }
-          }
-        }
-      }
-    }
-  `)
+  const data = useStaticQuery(query)
 
   const skills: Skill[] = useMemo(() => data.site.siteMetadata.skills.content, [data.site.siteMetadata.skills.content])
 
@@ -52,5 +38,21 @@ function Skills() {
     </section>
   )
 }
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        skills {
+          title
+          content {
+            name
+            items
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Skills

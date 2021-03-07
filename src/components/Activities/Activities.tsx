@@ -7,23 +7,7 @@ import { Activity } from '../../types'
 import { splitParagraph } from '../../utils'
 
 function Activities() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          activities {
-            title
-            content {
-              name
-              role
-              period
-              description
-            }
-          }
-        }
-      }
-    }
-  `)
+  const data = useStaticQuery(query)
 
   const activities: Activity[] = useMemo(() => data.site.siteMetadata.activities.content, [data.site.siteMetadata.activities.content])
 
@@ -72,5 +56,23 @@ function Activities() {
     </section>
   )
 }
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        activities {
+          title
+          content {
+            name
+            role
+            period
+            description
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Activities

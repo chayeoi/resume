@@ -23,24 +23,7 @@ function SEO({
   type = 'website',
   url = '',
 }: Props) {
-  const { site, favicon } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            image
-            author
-            siteUrl
-          }
-        }
-        favicon: file(relativePath: { eq: "logo.png" }) {
-          publicURL
-        }
-      }
-    `,
-  )
+  const { site, favicon } = useStaticQuery(query)
 
   const metaDescription = description || site.siteMetadata.description
   const metaImage = image || site.siteMetadata.image
@@ -126,5 +109,22 @@ function SEO({
     />
   )
 }
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        image
+        author
+        siteUrl
+      }
+    }
+    favicon: file(relativePath: { eq: "logo.png" }) {
+      publicURL
+    }
+  }
+`
 
 export default SEO

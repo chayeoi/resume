@@ -8,31 +8,7 @@ import { Contact } from '../../types'
 import { isEmail, splitParagraph } from '../../utils'
 
 function About() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          author
-          about {
-            title
-            content
-            contacts {
-              name
-              emoji
-              href
-            }
-          }
-        }
-      }
-      file(relativePath: { eq: "profile.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 380) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  const data = useStaticQuery(query)
 
   const paragraphs: string[] = useMemo(() => splitParagraph(data.site.siteMetadata.about.content), [data.site.siteMetadata.about])
 
@@ -82,5 +58,31 @@ function About() {
     </Flex>
   )
 }
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        author
+        about {
+          title
+          content
+          contacts {
+            name
+            emoji
+            href
+          }
+        }
+      }
+    }
+    file(relativePath: { eq: "profile.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 380) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default About

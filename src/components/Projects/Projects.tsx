@@ -25,36 +25,7 @@ function Projects() {
         }
       }[]
     }
-  }>(graphql`
-    query {
-      site {
-        siteMetadata {
-          projects {
-            title
-            content {
-              name
-              period
-              value
-              description
-            }
-          }
-        }
-      }
-      allFile(filter: {name: {regex: "/classting-school|classting-ai|personal-blog|translation/"}}) {
-        edges {
-          node {
-            name
-            base
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  }>(query)
 
   const projects: Project[] = useMemo(() => data.site.siteMetadata.projects.content, [data.site.siteMetadata.projects.content])
 
@@ -109,5 +80,36 @@ function Projects() {
     </section>
   )
 }
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        projects {
+          title
+          content {
+            name
+            period
+            value
+            description
+          }
+        }
+      }
+    }
+    allFile(filter: {name: {regex: "/classting-school|classting-ai|personal-blog|translation/"}}) {
+      edges {
+        node {
+          name
+          base
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Projects

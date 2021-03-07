@@ -7,22 +7,7 @@ import { Education } from '../../types'
 import { splitParagraph } from '../../utils'
 
 function Educations() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          educations {
-            title
-            content {
-              name
-              period
-              description
-            }
-          }
-        }
-      }
-    }
-  `)
+  const data = useStaticQuery(query)
 
   const educations: Education[] = useMemo(() => data.site.siteMetadata.educations.content, [data.site.siteMetadata.educations.content])
 
@@ -59,5 +44,22 @@ function Educations() {
     </section>
   )
 }
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        educations {
+          title
+          content {
+            name
+            period
+            description
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Educations

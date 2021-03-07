@@ -25,37 +25,7 @@ function Experiences() {
         }
       }[]
     }
-  }>(graphql`
-    query {
-      site {
-        siteMetadata {
-          experiences {
-            title
-            content {
-              name
-              position
-              period
-              value
-              description
-            }
-          }
-        }
-      }
-      allFile(filter: {name: {regex: "/^toss$|^classting$/"}}) {
-        edges {
-          node {
-            name
-            base
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  }>(query)
 
   const experiences: Experience[] = useMemo(() => data.site.siteMetadata.experiences.content, [data.site.siteMetadata.experiences.content])
 
@@ -101,5 +71,37 @@ function Experiences() {
     </section>
   )
 }
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        experiences {
+          title
+          content {
+            name
+            position
+            period
+            value
+            description
+          }
+        }
+      }
+    }
+    allFile(filter: {name: {regex: "/^toss$|^classting$/"}}) {
+      edges {
+        node {
+          name
+          base
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Experiences

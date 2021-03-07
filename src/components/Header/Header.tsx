@@ -9,15 +9,7 @@ type Props = {
 }
 
 function Header(props: Props) {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const data = useStaticQuery(query)
 
   return (
     <header {...props}>
@@ -50,5 +42,15 @@ function Header(props: Props) {
     </header>
   )
 }
+
+const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
 
 export default Header
