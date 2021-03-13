@@ -24,7 +24,7 @@ module.exports = {
       title: '경험',
       content: [
         {
-          name: '비바리퍼블리카',
+          name: '토스뱅크',
           position: '프론트엔드 개발자',
           period: '(Since Dec 2020)',
           value: 'toss',
