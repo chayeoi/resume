@@ -72,7 +72,7 @@ function Projects() {
               </Box>
             </Box>
             <Box pl={[0, 0, 3]} my={[0, 0, 4]} sx={{ flexBasis: '55%' }}>
-              <Image fluid={childImageSharps[project.value].fluid} alt={project.name} className={showOnScroll} />
+              {project.value && <Image fluid={childImageSharps[project.value].fluid} alt={project.name} className={showOnScroll} />}
             </Box>
           </Flex>
         ))}
